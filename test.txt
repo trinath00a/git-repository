@@ -8,4 +8,4 @@ This is my Third Line
 Positive: "Great!", "Productive!", "Really good!".
 Neutral/So-so: "Okay," "Chilled," "Same old".
 Challenging/Negative: "Hectic," "Challenging," "A bit stressful," "Disappointing" (if goals weren't met).
-Descriptive: "Busy with meetings," "Quiet, just relaxing," "Productive, I finished that report". 
+Descriptive: "Busy with meetings," "Quiet, just relaxing," "Productive, I finished that report".To unstage changes in Git, the recommended command is git restore --staged. This command removes the files from the staging area while keeping your local modifications intact in the working directory 
