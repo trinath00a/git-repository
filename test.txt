@@ -3,3 +3,9 @@ This is my first change
 Feature branch change
 
 This is my Third Line
+
+
+Positive: "Great!", "Productive!", "Really good!".
+Neutral/So-so: "Okay," "Chilled," "Same old".
+Challenging/Negative: "Hectic," "Challenging," "A bit stressful," "Disappointing" (if goals weren't met).
+Descriptive: "Busy with meetings," "Quiet, just relaxing," "Productive, I finished that report". 
