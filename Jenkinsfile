@@ -1,44 +1,27 @@
 pipeline {
     agent any
 
-    options {
-        timestamps()
-    }
-
     stages {
         stage('Checkout') {
             steps {
-                echo 'Checkout completed'
+                echo 'Code pulled from GitHub'
             }
         }
 
-        stage('Build') {
+        stage('Build Docker Image') {
             steps {
-                echo 'Build stage'
-                sh 'ls -l'
+                sh 'docker build -t myapp:latest .'
             }
         }
 
-        stage('Test') {
+        stage('Run Container') {
             steps {
-                echo 'Running tests'
-                sh 'echo "Tests passed"'
+                sh '''
+                docker stop myapp-container || true
+                docker rm myapp-container || true
+                docker run -d --name myapp-container -p 4000:3000 myapp:latest
+                '''
             }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploy stage (simulated)'
-            }
-        }
-    }
-
-    post {
-        success {
-            echo 'Pipeline completed successfully'
-        }
-        failure {
-           echo 'Pipeline failed.'
         }
     }
 }
